@@ -9,6 +9,7 @@ package edu.psu.abington.jzl6344.ist242;
 
 import java.util.ArrayList;
 
+
 public class SalesLeader {
     private int Id;
     private String Name;
@@ -23,6 +24,18 @@ public class SalesLeader {
         this.phoneNUmber = "";
         this.interest = "";
     }
+    /**
+     * This Constructor method keep the SalesLeader information
+     *
+     * @param Id        SalesLeader Id
+     * @param name      SalesLeader Name
+     * @param date      SalesLeader Join date
+     * @param phone     SalesLeader Phone number
+     * @param interest  SalerLeader Interest in
+     * @author          Team 6
+     * @version         Final
+     * @since           2020/06/25
+     */
 
     public SalesLeader(int Id, String name, String date, String phone, String interest){
         this.Id = Id;
@@ -32,6 +45,13 @@ public class SalesLeader {
         this.interest = interest;
     }
 
+    /**
+     * This is the setter and getter method .
+     *
+     * @author          Team 6
+     * @version         Final
+     * @since           2020/06/25
+     */
     public int getId() { return Id; }
     public void setId(int id) { Id = id; }
 

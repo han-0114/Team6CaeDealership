@@ -42,15 +42,15 @@ public class Inventory {
         System.out.println("Enter Vehicle ID: ");
         int Id = scnr.nextInt();
         System.out.println("Enter Vehicle Make: ");
-        String make = scnr.nextLine();
+        String make = scnr.next();
         System.out.println("Enter Vehicle Name: ");
-        String name = scnr.nextLine();
+        String name = scnr.next();
         System.out.println("Enter Vehicle Year: ");
         int year = scnr.nextInt();
         System.out.println("Enter Vehicle color: ");
-        String color = scnr.nextLine();
+        String color = scnr.next();
         System.out.println("Enter Vehicle VinNumber: ");
-        String vinN = scnr.nextLine();
+        String vinN = scnr.next();
         System.out.println("Enter Vehicle Price: ");
         double price = scnr.nextDouble();
         Vehicle vih = new Vehicle(make, price, year, vinN,Id,name,color);
@@ -82,15 +82,15 @@ public class Inventory {
                 System.out.println("Enter Vehicle ID: ");
                 int Id = scnr.nextInt();
                 System.out.println("Enter Vehicle Make: ");
-                String make = scnr.nextLine();
+                String make = scnr.next();
                 System.out.println("Enter Vehicle Name: ");
-                String name = scnr.nextLine();
+                String name = scnr.next();
                 System.out.println("Enter Vehicle Year: ");
                 int year = scnr.nextInt();
                 System.out.println("Enter Vehicle color: ");
-                String color = scnr.nextLine();
+                String color = scnr.next();
                 System.out.println("Enter Vehicle VinNumber: ");
-                String vinN = scnr.nextLine();
+                String vinN = scnr.next();
                 System.out.println("Enter Vehicle Price: ");
                 double price = scnr.nextDouble();
                 Vehicle vih = new Vehicle(make, price, year, vinN,Id,name,color);
@@ -104,9 +104,9 @@ public class Inventory {
         System.out.println("Enter Part Id: ");
         int Id = scnr.nextInt();
         System.out.println("Enter Part Name: ");
-        String name = scnr.nextLine();
+        String name = scnr.next();
         System.out.println("Enter Part type: ");
-        String type = scnr.nextLine();
+        String type = scnr.next();
         Part part = new Part(Id,name,type);
         partList.add(part);
     }
@@ -136,9 +136,9 @@ public class Inventory {
                 System.out.println("Enter Part Id: ");
                 int Id = scnr.nextInt();
                 System.out.println("Enter Part Name: ");
-                String name = scnr.nextLine();
+                String name = scnr.next();
                 System.out.println("Enter Part type: ");
-                String type = scnr.nextLine();
+                String type = scnr.next();
                 Part part = new Part(Id,name,type);
                 partList.set(i, part);
             }

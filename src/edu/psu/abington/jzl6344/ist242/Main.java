@@ -30,7 +30,8 @@ public class Main {
         ArrayList<SalesLeader> leadList = new ArrayList<>();
 
         /**
-         * Create a new Dealership d1 and adding in to the Dealership list.
+         * Create a new Dealership name d1 and adding in to the Dealership list.
+         * System print out a Welcome message to the user.
          *
          * @author          Team 6
          * @version         Final
@@ -75,7 +76,7 @@ public class Main {
         leadList.add(l1);
 
         /**
-         *
+         * Create a Inventory list and Scanner will scan the user input.
          *
          * @author          Team 6
          * @version         Final
@@ -83,12 +84,29 @@ public class Main {
          */
         Inventory inventory = new Inventory();
         Scanner menuChoice = new Scanner(System.in);
+
+        /**
+         * User will Enter the menu number to choose what section would he/she like to go.
+         * System will showing the Menu with choice
+         *
+         * @author          Team 6
+         * @version         Final
+         * @since           2020/06/25
+         */
         int mainMeun;
         do {
-            System.out.println("\n1: Inventory Menu\n2: Add Customer\n3: Add SaleLead\n4: Search SalesPerson\n5: Customer\n6: Quit\n");
+            System.out.println("\n1: Inventory Menu\n2: Add Customer\n3: Add SaleLead\n4: Search Customer\n5: Search SalesPerson\n6: Quit\n");
             System.out.println("Enter your choice: ");
             mainMeun = menuChoice.nextInt();
             switch (mainMeun) {
+                /**
+                 * While the user Enter the 1,2,3 or 4 etc... which is the key words,
+                 * then the program will going to the direct case with the different function.
+                 *
+                 * @author          Team 6
+                 * @version         Final
+                 * @since           2020/06/25
+                 */
                 case 1 :
                     int choice;
                     System.out.println("\n1.Vehicle");
@@ -219,23 +237,23 @@ public class Main {
      */
 
     public Customer addCustomer(){
-        Customer cust;
         Scanner scnr = new Scanner(System.in);
+        Customer cust;
         System.out.println("Enter Customer Id: ");
         int Id = scnr.nextInt();
-        System.out.println("Enter Customer name: ");
-        String name = scnr.nextLine();
+        System.out.println("Enter Customer Name: ");
+        String Name = scnr.next();
         System.out.println("Enter Customer Address: ");
-        String address = scnr.nextLine();
+        String address = scnr.next();
         System.out.println("Enter Customer PhoneNumber: ");
-        String PhoneNumber = scnr.nextLine();
+        String PhoneNumber = scnr.next();
         System.out.println("Enter Customer Email: ");
-        String email = scnr.nextLine();
-        cust = new Customer(Id,name,address,PhoneNumber,email);
+        String email = scnr.next();
+        cust = new Customer(Id,Name,address,PhoneNumber,email);
         return cust;
     }
     /**
-     * Adding new SaleLead to the ArrayList<SaleLead>.
+     * This method Adding new SaleLead to the ArrayList<SaleLead>.
      *
      * @return          Lead-New SaleLead
      * @author          Team 6
@@ -249,14 +267,14 @@ public class Main {
         System.out.println("Enter SaleLead Id: ");
         int Id = scnr.nextInt();
         System.out.println("Enter SaleLead Name: ");
-        String name = scnr.nextLine();
+        String Name = scnr.next();
         System.out.println("Enter SaleLead join Date: ");
-        String date = scnr.nextLine();
+        String date = scnr.next();
         System.out.println("Enter SaleLead PhoneNumber: ");
-        String phone = scnr.nextLine();
+        String phone = scnr.next();
         System.out.println("Enter what SaleLead interest: ");
-        String interest = scnr.nextLine();
-        lead = new SalesLeader(Id,name,date,phone,interest);
+        String interest = scnr.next();
+        lead = new SalesLeader(Id,Name,date,phone,interest);
         return lead;
     }
 
