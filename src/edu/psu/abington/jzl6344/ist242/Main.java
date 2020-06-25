@@ -18,16 +18,36 @@ public class Main {
 
         Scanner scnr = new Scanner(System.in);
 
+        /**
+         * Creating the New ArrayList for SalesPerson,Customer,Dealership and Sales Leader.
+         * @author          Team 6
+         * @version         Final
+         * @since           2020/06/25
+         */
         ArrayList<SalesPerson> saleList = new ArrayList<>();
         ArrayList<Dealership> dealerList = new ArrayList<>();
         ArrayList<Customer> custList = new ArrayList<>();
         ArrayList<SalesLeader> leadList = new ArrayList<>();
 
+        /**
+         * Create a new Dealership d1 and adding in to the Dealership list.
+         *
+         * @author          Team 6
+         * @version         Final
+         * @since           2020/06/25
+         */
         Dealership d1 = new Dealership("Team6","1234 South Cat Street, Philadelphia PA 00000");
         dealerList.add(d1);
-
         System.out.println("Welcome to Team 6 Car Dealership");
         Dealership.listDealerships(dealerList);
+
+        /**
+         * Create a new SalesPerson s1 to s4 and adding in to the SalesPerson list.
+         *
+         * @author          Team 6
+         * @version         Final
+         * @since           2020/06/25
+         */
 
         SalesPerson s1 = new SalesPerson(1, "Wenhua", "1234 World Street", "123-456-1234");
         SalesPerson s2 = new SalesPerson(2, "Nina", "2134 World Street", "213-234-2341");
@@ -38,6 +58,14 @@ public class Main {
         saleList.add(s3);
         saleList.add(s4);
 
+        /**
+         * Create a new Customer and SalesLeader c1 and l1 then adding in to the Customer and SalesLeader list.
+         *
+         * @author          Team 6
+         * @version         Final
+         * @since           2020/06/25
+         */
+
         Customer c1 = new Customer(1,"Yeak", "1111 Cat St", "123-234-4444",
                 "1234@mail.com");
         custList.add(c1);
@@ -46,13 +74,19 @@ public class Main {
                 "Toyota");
         leadList.add(l1);
 
-
+        /**
+         *
+         *
+         * @author          Team 6
+         * @version         Final
+         * @since           2020/06/25
+         */
         Inventory inventory = new Inventory();
         Scanner menuChoice = new Scanner(System.in);
         int mainMeun;
         do {
             System.out.println("\n1: Inventory Menu\n2: Add Customer\n3: Add SaleLead\n4: Search SalesPerson\n5: Customer\n6: Quit\n");
-            System.out.println("\n Enter your choice: ");
+            System.out.println("Enter your choice: ");
             mainMeun = menuChoice.nextInt();
             switch (mainMeun) {
                 case 1 :
@@ -60,7 +94,7 @@ public class Main {
                     System.out.println("\n1.Vehicle");
                     System.out.println("2.Part");
                     System.out.println("3.Exit");
-                    System.out.println("\n Enter your choice: ");
+                    System.out.println("Enter your choice: ");
                     choice = scnr.nextInt();
 
                     switch(choice) {
@@ -175,6 +209,15 @@ public class Main {
 
     }
 
+    /**
+     * Adding new customer to the ArrayList<Customer>.
+     *
+     * @return          Cust-New Customer
+     * @author          Team 6
+     * @version         Final
+     * @since           2020/06/25
+     */
+
     public Customer addCustomer(){
         Customer cust;
         Scanner scnr = new Scanner(System.in);
@@ -191,6 +234,14 @@ public class Main {
         cust = new Customer(Id,name,address,PhoneNumber,email);
         return cust;
     }
+    /**
+     * Adding new SaleLead to the ArrayList<SaleLead>.
+     *
+     * @return          Lead-New SaleLead
+     * @author          Team 6
+     * @version         Final
+     * @since           2020/06/25
+     */
 
     public SalesLeader addSaleLead(){
         SalesLeader lead;
